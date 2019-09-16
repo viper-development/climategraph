@@ -1,6 +1,7 @@
 loadJsonGraph('data/emissions/World.json', 'Emissions Per Capita (Metric Tons)', 'emissions-per-capita');
 loadJsonGraph('data/emissions/Germany.json', 'Emissions Per Capita (Metric Tons)', 'emissions-per-capita');
 loadJsonGraph('data/emissions/China.json', 'Emissions Per Capita (Metric Tons)', 'emissions-per-capita');
+loadJsonGraph('data/emissions/Australia.json', 'Emissions Per Capita (Metric Tons)', 'emissions-per-capita');
 
 loadJsonGraph('data/emissions_total/Germany.json', 'Total Emissions (in kt)', 'emissions-total');
 

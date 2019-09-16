@@ -1,36 +1,43 @@
 <html>
-    <head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.min.js"></script>
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Questrial|Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Questrial|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
 
-    <body>
-        <nav class="white">
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo"><img width="150px" src="logo_wide.svg" height="auto"></a>
-            </div>
-        </nav>
-        <section id="main">
-            <div class="container">
-                <div class="row">
-                    <h2><b>ClimateGraph.io</b></h2>
-                    <h5 class="light grey-text">Visualising Data about Climate Change</h5>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="line-charts">
-                <div id="emissions-per-capita"></div>
-                <div id="emissions-total"></div>
-            </div>
-        </section>
-    </body>
+  <body>
+    <nav class="white">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo"><img width="150px" src="logo_wide.svg" height="auto"></a>
+      </div>
+    </nav>
+    <section class="slide hero hero--home">
+      <div class="arrow-down-wrapper">
+        <i class="arrow-down fas fa-chevron-down"></i>
+      </div>
+      <img class="hero__bg-img" src="images/background.svg" alt="background">
+      <div class="container">
+        <div class="hero__content-wrapper">
+          <h1 class="hero__title">ClimateGraph.io</h1>
+          <p class="text">Visualising Data about Climate Change</p>
+          <a class="cta ripple" href='{{ "startproject/" | relLangURL }}'>
+            TODO CTA?
+          </a>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="line-charts">
+        <div id="emissions-per-capita"></div>
+        <div id="emissions-total"></div>
+      </div>
+    </section>
+  </body>
 
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </html>

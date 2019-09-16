@@ -1,0 +1,27 @@
+.axis text {
+    font: 10px sans-serif;
+}
+
+path {
+    fill: transparent;
+    stroke: black;
+}
+
+@media only screen and (min-width: 993px) {
+    .container {
+        width: 90%;
+    }
+}
+
+h2 {
+    font-family: Questrial
+}
+
+section {
+    height: 100vh;
+}
+
+nav .brand-logo {
+    margin-left: 0.2em;
+    margin-top: 0.2em;
+}

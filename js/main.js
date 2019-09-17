@@ -5,6 +5,9 @@ loadJsonGraph('data/emissions/Australia.json', 'Emissions Per Capita (Metric Ton
 
 loadJsonGraph('data/emissions_total/Germany.json', 'Total Emissions (in kt)', 'emissions-total');
 
+loadJsonGraph('data/sector_sunburst.json', 'Emissions in tonnes per year from 2010', 'emissions-sector-sunburst');
+
+
 function loadJsonGraph(url, title, id) {
   d3.json(url)
     .then((data) => {

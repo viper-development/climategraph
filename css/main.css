@@ -26,10 +26,67 @@ nav .brand-logo {
     margin-top: 0.2em;
 }
 
-.story-title {
-    font-weight: 700;
-    padding-top: 5vmin;
-    padding-bottom: 5vmin;
-    text-align: center;
-    top: 0;
+h1,h2,h3,h4,h5 {
+    font-family: Raleway,sans-serif;
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.title {
+    font-size: 2em;
+}
+
+body {
+    color: #201b54;
+    overflow-x: hidden;
+}
+
+body, html {
+    font-size: 18px;
+}
+
+body, html {
+    box-sizing: border-box;
+    color: #201b54;
+    font-family: Heebo,sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+    width: 100%;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.hero__bg-img {
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    -webkit-transform: translateX(10%);
+    transform: translateX(10%);
+    width: 75%;
+    z-index: -1;
+}
+
+.hero__graphic {
+    position: absolute;
+    max-height: 100%;
+    width: 40%;
+    right: 10%;
+    -webkit-transform: translateY(-7%);
+    transform: translateY(-7%);
+}
+
+#main {
+    height: 100vh;
+    overflow: hidden;
 }

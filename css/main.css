@@ -25,3 +25,11 @@ nav .brand-logo {
     margin-left: 0.2em;
     margin-top: 0.2em;
 }
+
+.story-title {
+    font-weight: 700;
+    padding-top: 5vmin;
+    padding-bottom: 5vmin;
+    text-align: center;
+    top: 0;
+}

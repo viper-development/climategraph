@@ -198,6 +198,34 @@ select {
     }
 }
 
+@media screen and (max-width: 568px) and (min-height: 720px) {
+    .hero__bg-img {
+        width: 130%;
+    }
+
+    .hero__graphic {
+        min-width: 100px;
+        height: 10vh;
+        width: auto;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 1175px) {
+    .hero__bg-img {
+        width: 50%;
+        top: 0;
+        -webkit-transform: translate(10%,-50%);
+        transform: translate(10%,-50%);
+    }
+
+    .hero__graphic {
+        width: 30%;
+        right: 5%;
+    }
+}
+
 p:last-child {
     margin-bottom: 0;
 }

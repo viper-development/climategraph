@@ -19,28 +19,18 @@ function processData(data, id, newPlot, showlegend) {
   if (newPlot) {
     Plotly.newPlot(lineplot, [data],
       { showlegend: showlegend, margin: {
-        l: 0,
-        r: 0,
-        b: 0,
-        t: 0,
-        pad: 0
+        l: 0, r: 0, b: 0, t: 0, pad: 0
       }, legend: {
-        x: 0,
-        y: -0.3
+        x: 0, y: -0.3
       }},
-      { responsive: true });
+      { responsive: true, showSendToCloud: true });
   } else {
     Plotly.plot(lineplot, [data], { showlegend: showlegend, margin: {
-      l: 0,
-      r: 0,
-      b: 0,
-      t: 0,
-      pad: 0
+      l: 0, r: 0, b: 0, t: 0, pad: 0
     }, legend: {
-      x: 0,
-      y: -0.3
+      x: 0, y: -0.3
     }},
-    { responsive: true});
+    { responsive: true, showSendToCloud: true });
   }
 }
 

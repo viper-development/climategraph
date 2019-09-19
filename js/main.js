@@ -15,6 +15,7 @@ function loadJsonGraph(url, id, newPlot=false, showlegend=true) {
 
 function processData(data, id, newPlot, showlegend) {
   lineplot = document.getElementById(id);
+  console.log(newPlot, id, showlegend)
   if (newPlot) {
     Plotly.newPlot(lineplot, [data],
       { showlegend: showlegend, width: "100%", legend: {
@@ -22,12 +23,13 @@ function processData(data, id, newPlot, showlegend) {
         y: -0.3
       }},
       { responsive: true });
+  } else {
+    Plotly.plot(lineplot, [data], { showlegend: showlegend, width: "100%",legend: {
+      x: 0,
+      y: -0.3
+    }},
+    { responsive: true});
   }
-	Plotly.plot(lineplot, [data], { showlegend: showlegend, width: "100%",legend: {
-    x: 0,
-    y: -0.3
-  }},
-  { responsive: true});
 }
 
 function loadPredictionsCsv() {
@@ -147,5 +149,5 @@ function setupCountryPicker() {
 function setupCountrySelector() {
   filename = userCountrySelector.value + '.json';
   loadJsonGraph('data/emissions/' + filename, 'emissions-per-capita');
-  loadJsonGraph('data/emissions_total/' + filename, 'emissions-total', true, true);
+  loadJsonGraph('data/emissions_total/' + filename, 'emissions-total', false, true);
 }

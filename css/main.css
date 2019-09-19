@@ -17,10 +17,6 @@ h2 {
     font-family: Questrial
 }
 
-section {
-    height: 100vh;
-}
-
 nav .brand-logo {
     margin-left: 0.2em;
     margin-top: 0.2em;
@@ -93,4 +89,115 @@ body, html {
 
 select {
     display: block;
+}
+
+.preflight {
+    background-color: #093b8c;
+    color: #fff;
+}
+
+.cta {
+    background-color: #1159d1;
+    border: 0;
+    border-radius: 100vw;
+    color: #fff;
+    display: inline-block;
+    font-family: Raleway,sans-serif;
+    font-weight: 700;
+    padding: 1em 2em;
+    text-decoration: none;
+}
+
+.ripple {
+    background-position: 50%;
+    cursor: pointer;
+    transition: background .8s;
+}
+
+.cta-wrapper {
+    padding: 2em 0;
+}
+
+.footer__cta-wrapper {
+    background-color: #1159d1;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.3em;
+    font-weight: 800;
+}
+
+.cta--green {
+    background-color: #15d1a5;
+}
+
+.footer__links {
+    background-color: #201b54;
+    color: #fff;
+}
+
+.footer__links .container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding-top: 2em;
+}
+
+.footer__links h3 {
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+.footer__links ul {
+    font-family: Heebo,sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__links ul li a {
+    color: #fff;
+    opacity: .65;
+    text-decoration: none;
+    transition: .2s ease-in;
+}
+
+.footer__links .copyright {
+    border-top: 1px solid #3d34a1;
+    font-size: .9em;
+    grid-column: 1/span 4;
+    line-height: 3;
+    margin-top: 4em;
+    opacity: .65;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 568px) {
+    .footer__links .container {
+        display: block;
+    }
+    p {
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .footer__links .container {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .footer__links .logo {
+        display: none;
+    }
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+h4 {
+    margin: 0;
 }

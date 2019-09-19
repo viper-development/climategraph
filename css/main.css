@@ -55,11 +55,11 @@ body, html {
 }
 
 .right {
-    text-align: right;
+    text-align: left;
 }
 
 .left {
-    text-align: left;
+    text-align: right;
 }
 
 .hero__bg-img {

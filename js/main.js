@@ -101,6 +101,10 @@ function plotGraph(steps, frames) {
         transition: {duration: 500},
         steps
       }],
+      legend: {
+        x: 0,
+        y: -0.5
+      }
     },
     frames
   });

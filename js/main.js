@@ -31,7 +31,7 @@ function processData(data, id, newPlot, showlegend) {
 }
 
 function loadPredictionsCsv() {
-  d3.csv('data/raw/predictions.csv')
+  d3.csv('data/predictions_stripped.csv')
     .then((data) => {
       let columns = Object.keys(data[0]);
       columns.splice(0, 3);
@@ -128,14 +128,14 @@ function setupCountryPicker() {
       assignOptions(countries, userCountrySelector);
 
       countrySelector1.addEventListener('change', function() {
-        loadJsonGraph('data/emissions/' + countrySelector1.value + '.json', 
-        'emissions-per-capita', 
+        loadJsonGraph('data/emissions/' + countrySelector1.value + '.json',
+        'emissions-per-capita',
           false,
           true);
       }, false);
       countrySelector2.addEventListener('change', function() {
-        loadJsonGraph('data/emissions_total/' + countrySelector2.value + '.json', 
-          'emissions-total', 
+        loadJsonGraph('data/emissions_total/' + countrySelector2.value + '.json',
+          'emissions-total',
           false,
           true);
       }, false);

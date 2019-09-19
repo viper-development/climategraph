@@ -183,6 +183,10 @@ select {
     p {
         line-height: 1.5;
     }
+    h1 {
+        font-size: 2em;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 960px) {

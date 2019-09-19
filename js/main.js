@@ -15,16 +15,28 @@ function loadJsonGraph(url, id, newPlot=false, showlegend=true) {
 
 function processData(data, id, newPlot, showlegend) {
   lineplot = document.getElementById(id);
-  console.log(newPlot, id, showlegend)
+  console.log(lineplot)
   if (newPlot) {
     Plotly.newPlot(lineplot, [data],
-      { showlegend: showlegend, width: "100%", legend: {
+      { showlegend: showlegend, margin: {
+        l: 0,
+        r: 0,
+        b: 0,
+        t: 0,
+        pad: 0
+      }, legend: {
         x: 0,
         y: -0.3
       }},
       { responsive: true });
   } else {
-    Plotly.plot(lineplot, [data], { showlegend: showlegend, width: "100%",legend: {
+    Plotly.plot(lineplot, [data], { showlegend: showlegend, margin: {
+      l: 0,
+      r: 0,
+      b: 0,
+      t: 0,
+      pad: 0
+    }, legend: {
       x: 0,
       y: -0.3
     }},
@@ -91,6 +103,13 @@ function plotGraph(steps, frames) {
       }
     }],
     layout: {
+      margin: {
+        l: 0,
+        r: 0,
+        b: 0,
+        t: 0,
+        pad: 0
+      },
       height: 700,
       xaxis: {range: [1990, 2100]},
       yaxis: {range: [-200, 200]},

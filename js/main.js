@@ -1,9 +1,5 @@
 loadJsonGraph('data/emissions/World.json', 'emissions-per-capita');
-loadJsonGraph('data/emissions/Germany.json', 'emissions-per-capita');
-loadJsonGraph('data/emissions/China.json', 'emissions-per-capita');
-loadJsonGraph('data/emissions/Australia.json', 'emissions-per-capita');
-
-loadJsonGraph('data/emissions_total/Germany.json', 'emissions-total', true, false);
+loadJsonGraph('data/emissions_total/World.json', 'emissions-total', true, true);
 
 loadJsonGraph('data/sector_sunburst.json', 'emissions-sector-sunburst');
 
@@ -20,9 +16,9 @@ function loadJsonGraph(url, id, newPlot=false, showlegend=true) {
 function processData(data, id, newPlot, showlegend) {
   lineplot = document.getElementById(id);
   if (newPlot) {
-    Plotly.newPlot(lineplot, [data], { showlegend: showlegend});
+    Plotly.newPlot(lineplot, [data], { showlegend: showlegend, width: "100%"}, {responsive: true});
   }
-	Plotly.plot(lineplot, [data], { showlegend: showlegend});
+	Plotly.plot(lineplot, [data], { showlegend: showlegend, width: "100%"}, {responsive: true});
 }
 
 function loadPredictionsCsv() {
@@ -140,9 +136,6 @@ function setupCountryPicker() {
 }
 
 function setupCountrySelector() {
-  if (userCountrySelector.value) {
-    $('.select-label').text('Compare ' + userCountrySelector.value + ' with another country');
-  }
   filename = userCountrySelector.value + '.json';
   loadJsonGraph('data/emissions/' + filename, 'emissions-per-capita');
   loadJsonGraph('data/emissions_total/' + filename, 'emissions-total', true, true);

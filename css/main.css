@@ -233,3 +233,8 @@ p:last-child {
 h4 {
     margin: 0;
 }
+
+.chip {
+    background: #eee;
+    border-radius: 10px;
+}

@@ -168,15 +168,13 @@ function setupCountrySelector() {
 }
 
 const temperatures = {
-  "No climate policies (high)": "4.1-4.8&#8451;",
-  "No climate policies (low)": "4.1-4.8&#8451;",
-  "Pledges (high)": "2.6-3.2&#8451;",
-  "Pledges (low)": "2.6-3.2&#8451",
-  "Current policies (high)": "3.1-3.7&#8451;",
-  "Current policies (low)": "3.1-3.7&#8451;",
+  "No climate policies (high)": "4.8&#8451;",
+  "No climate policies (low)": "4.1&#8451;",
+  "Pledges (high)": "3.2&#8451;",
+  "Pledges (low)": "2.6&#8451",
+  "Current policies (high)": "3.7&#8451;",
+  "Current policies (low)": "3.1&#8451;",
   "2C pathways (median)": "2&#8451;",
-  "1.5C pathways (high)": "1.5&#8451;",
-  "1.5C pathways (low)": "1.5&#8451;",
   "1.5C pathways (median)": "1.5&#8451;",
 }
 

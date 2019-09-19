@@ -83,17 +83,20 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col m4 left s12">
+                        <div class="col m6 left s12">
                             <h2 class="title">Emissions in tons per year from 2010</h2>
                             <p>
                                 Okay, now we know about the emissions, but where do the emissions come from?
-                                This chart shows how emissions are distributed across the different industries.
+                                This chart shows how emissions (in million tons per year) are distributed across the different industries.
                                 With a click on the industries you can see which country amounts to how much to this sector.
+                            </p>
+                            <p>
+                                Do note that for Agriculture, Land use and Forestry some countries produce negative emissions which is not renderable in a graph like this. Any values smaller than 200 million are stripped away here, for other countries we have stripped values smaller than 50 million for better browser performance.
                             </p>
                             <p>Source: <a href="https://ourworldindata.org/grapher/global-carbon-dioxide-emissions-by-sector">Our World in Data</a></p>
 
                         </div>
-                        <div class="col m8 s12">
+                        <div class="col m6 s12">
                             <div id="emissions-sector-sunburst"></div>
                         </div>
                     </div>

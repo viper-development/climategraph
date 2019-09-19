@@ -3,22 +3,26 @@ loadJsonGraph('data/emissions/Germany.json', 'emissions-per-capita');
 loadJsonGraph('data/emissions/China.json', 'emissions-per-capita');
 loadJsonGraph('data/emissions/Australia.json', 'emissions-per-capita');
 
-loadJsonGraph('data/emissions_total/Germany.json', 'emissions-total');
+loadJsonGraph('data/emissions_total/Germany.json', 'emissions-total', true, false);
 
 loadJsonGraph('data/sector_sunburst.json', 'emissions-sector-sunburst');
 
 loadPredictionsCsv();
+setupCountryPicker();
 
-function loadJsonGraph(url, id) {
+function loadJsonGraph(url, id, newPlot=false, showlegend=true) {
   d3.json(url)
     .then((data) => {
-      processData(data, id);
+      processData(data, id, newPlot, showlegend);
     })
 }
 
-function processData(data, id) {
+function processData(data, id, newPlot, showlegend) {
   lineplot = document.getElementById(id);
-	Plotly.plot(lineplot, [data], { showlegend: true});
+  if (newPlot) {
+    Plotly.newPlot(lineplot, [data], { showlegend: showlegend});
+  }
+	Plotly.plot(lineplot, [data], { showlegend: showlegend});
 }
 
 function loadPredictionsCsv() {
@@ -93,4 +97,53 @@ function plotGraph(steps, frames) {
     },
     frames
   });
+}
+
+function assignOptions(textArray, selector) {
+  for (var i = 0; i < textArray.length;  i++) {
+      var currentOption = document.createElement('option');
+      currentOption.text = textArray[i];
+      selector.appendChild(currentOption);
+  }
+}
+
+function setupCountryPicker() {
+  d3.csv('data/raw/worldbank-emissions.csv')
+    .then(data => {
+      country_rows = _.filter(data, (d, i) => {
+        return d['Country Code'] != ""
+      })
+
+      countries = _.pluck(country_rows, 'Country Name')
+      countrySelector1 = document.querySelector('.countrydata1');
+      countrySelector2 = document.querySelector('.countrydata2');
+      userCountrySelector = document.querySelector('.usercountry');
+      assignOptions(countries, countrySelector1);
+      assignOptions(countries, countrySelector2);
+      assignOptions(countries, userCountrySelector);
+
+      countrySelector1.addEventListener('change', function() {
+        loadJsonGraph('data/emissions/' + countrySelector1.value + '.json', 
+        'emissions-per-capita', 
+          false,
+          true);
+      }, false);
+      countrySelector2.addEventListener('change', function() {
+        loadJsonGraph('data/emissions_total/' + countrySelector2.value + '.json', 
+          'emissions-total', 
+          false,
+          true);
+      }, false);
+
+      userCountrySelector.addEventListener('change', setupCountrySelector, false);
+    });
+}
+
+function setupCountrySelector() {
+  if (userCountrySelector.value) {
+    $('.select-label').text('Compare ' + userCountrySelector.value + ' with another country');
+  }
+  filename = userCountrySelector.value + '.json';
+  loadJsonGraph('data/emissions/' + filename, 'emissions-per-capita');
+  loadJsonGraph('data/emissions_total/' + filename, 'emissions-total', true, true);
 }

@@ -16,11 +16,25 @@
         <section id="main">
             <div class="container">
                 <div class="row">
-                    <a href="#" class="brand-logo"><img width="150px" src="logo_wide.svg" height="auto"></a>
-                    <h1>ClimateGraph.io</h1>
-                    <p>Visualising Data about Climate Change</p>
-                    <br><br>
-                    <h1>lets talk about<br>Climate Change.</h1>
+                    <div class="col m6">
+                        <a href="#" class="brand-logo"><img width="150px" src="logo_wide.svg" height="auto"></a>
+                        <h1>ClimateGraph.io</h1>
+                        <p>Visualising Data about Climate Change</p>
+                        <p>
+                            Welcome to ClimateGraph.
+                        </p>
+                        <p>
+                            Here you can see how the CO2 emissions are, which are driving climate change. In your country and in the world.
+                        </p>
+                        <p>
+                            You can play with the graphs, compare your country with others and at the end choose the level of climate policy you like and see how it affects emissions and the associated global warming. You'll also get an idea of which industries cause the most emissions and to which countries they contribute the most.
+                        </p>
+                        <div class="control-row">
+                            <select class="usercountry">
+                                <option selected disabled>Choose Your Country</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -30,8 +44,15 @@
                     <div class="row center">
                         <h2 class="title">Emissions Per Capita</h2>
                         <p>Based on Carbon Dioxide Emissions By Sector</p>
+                        <div class="control-row">
+                            <select class="countrydata1">
+                                <option selected disabled>Compare with another country</option>
+                            </select>
+                        </div>
                         <p>Source</p>
-                        <div id="emissions-per-capita"></div>
+                        <div class="row">
+                            <div id="emissions-per-capita"></div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col m8">
@@ -40,14 +61,22 @@
                         <div class="col m4 right">
                             <h2 class="title">Total Emissions</h2>
                             <p>Total Emissions (in kt)</p>
+                            <div class="control-row">
+                                <select class="countrydata2">
+                                    <option selected disabled>Compare with another country</option>
+                                </select>
+                            </div>
                             <p>Source</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col m4">
                             <h2 class="title">Emissions in tonnes per year from 2010</h2>
-                            <p></p>
+                            <p>Okay, now we know about the emissions, but where do the emissions come from?
+                                This chart shows how emissions are distributed across the different industries. With a click on the industries you can see which country amounts to how much to this sector.
+                            </p>
                             <p>Source</p>
+
                         </div>
                         <div class="col m8">
                             <div id="emissions-sector-sunburst"></div>

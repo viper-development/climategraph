@@ -78,8 +78,8 @@ body, html {
     max-height: 100%;
     width: 40%;
     right: 10%;
-    -webkit-transform: translateY(-7%);
-    transform: translateY(-7%);
+    -webkit-transform: translateY(7%);
+    transform: translateY(7%);
 }
 
 #main {

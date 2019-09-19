@@ -16,9 +16,18 @@ function loadJsonGraph(url, id, newPlot=false, showlegend=true) {
 function processData(data, id, newPlot, showlegend) {
   lineplot = document.getElementById(id);
   if (newPlot) {
-    Plotly.newPlot(lineplot, [data], { showlegend: showlegend, width: "100%"}, {responsive: true});
+    Plotly.newPlot(lineplot, [data],
+      { showlegend: showlegend, width: "100%", legend: {
+        x: 0,
+        y: -0.3
+      }},
+      { responsive: true });
   }
-	Plotly.plot(lineplot, [data], { showlegend: showlegend, width: "100%"}, {responsive: true});
+	Plotly.plot(lineplot, [data], { showlegend: showlegend, width: "100%",legend: {
+    x: 0,
+    y: -0.3
+  }},
+  { responsive: true});
 }
 
 function loadPredictionsCsv() {

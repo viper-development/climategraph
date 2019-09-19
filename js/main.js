@@ -117,6 +117,8 @@ function plotGraph(steps, frames) {
     },
     frames
   });
+
+  setupPredictionChartClickListener();
 }
 
 function assignOptions(textArray, selector) {
@@ -163,4 +165,35 @@ function setupCountrySelector() {
   filename = userCountrySelector.value + '.json';
   loadJsonGraph('data/emissions/' + filename, 'emissions-per-capita');
   loadJsonGraph('data/emissions_total/' + filename, 'emissions-total', false, true);
+}
+
+const temperatures = {
+  "No climate policies (high)": "4.1-4.8&#8451;",
+  "No climate policies (low)": "4.1-4.8&#8451;",
+  "Pledges (high)": "2.6-3.2&#8451;",
+  "Pledges (low)": "2.6-3.2&#8451",
+  "Current policies (high)": "3.1-3.7&#8451;",
+  "Current policies (low)": "3.1-3.7&#8451;",
+  "2C pathways (median)": "2&#8451;",
+  "1.5C pathways (high)": "1.5&#8451;",
+  "1.5C pathways (low)": "1.5&#8451;",
+  "1.5C pathways (median)": "1.5&#8451;",
+}
+
+function setupPredictionChartClickListener() {
+  showPredictionText();
+  $(document).ready(function() {
+    $('.slider-group > text').bind("DOMSubtreeModified",function(){
+      text = $(this).text();
+      showPredictionText(text);
+    });
+  })
+}
+
+function showPredictionText(text) {
+  if (!text || !temperatures[text]) {
+    text = "No climate policies (high)";
+  }
+  $('.prediction-scenario').html(text)
+  $('.prediction-temperature').html(temperatures[text])
 }

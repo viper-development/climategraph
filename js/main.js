@@ -21,14 +21,21 @@ function processData(data, id, newPlot, showlegend) {
         l: 20, r: 20, b: 0, t: 0, pad: 0
       }, legend: {
         x: 0, y: -0.3
-      }},
+      }, 
+      xaxis: { fixedrange: true },
+      yaxis: { fixedrange: true }
+      },
       { responsive: true, showSendToCloud: true });
   } else {
-    Plotly.plot(lineplot, [data], { showlegend: showlegend, margin: {
-      l: 20, r: 20, b: 0, t: 0, pad: 0
-    }, legend: {
-      x: 0, y: -0.3
-    }},
+    Plotly.plot(lineplot, [data],
+      { showlegend: showlegend, margin: {
+        l: 20, r: 20, b: 0, t: 0, pad: 0
+      }, legend: {
+        x: 0, y: -0.3
+      }, 
+      xaxis: { fixedrange: true },
+      yaxis: { fixedrange: true }
+      },
     { responsive: true, showSendToCloud: true });
   }
 }
@@ -100,8 +107,8 @@ function plotGraph(steps, frames) {
         pad: 0
       },
       height: 700,
-      xaxis: {range: [1990, 2100]},
-      yaxis: {range: [-200, 200]},
+      xaxis: {range: [1990, 2100], fixedrange: true },
+      yaxis: {range: [-200, 200], fixedrange: true },
       sliders: [{
         pad: {t: 30},
         x: 0.05,

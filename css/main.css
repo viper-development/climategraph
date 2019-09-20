@@ -201,6 +201,7 @@ select {
 @media screen and (max-width: 568px) and (min-height: 720px) {
     .hero__bg-img {
         width: 130%;
+        transform: translate(0%,-50%) !important;
     }
 
     .hero__graphic {

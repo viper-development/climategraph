@@ -239,3 +239,9 @@ h4 {
     background: #eee;
     border-radius: 10px;
 }
+
+.social-icons .fab {
+    font-size: 1.5em;
+    color: black;
+    padding-right: 1em;
+}

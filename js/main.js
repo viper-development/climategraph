@@ -21,7 +21,7 @@ function processData(data, id, newPlot, showlegend) {
         l: 20, r: 20, b: 0, t: 0, pad: 0
       }, legend: {
         x: 0, y: -0.3
-      }, 
+      },
       xaxis: { fixedrange: true },
       yaxis: { fixedrange: true }
       },
@@ -32,7 +32,7 @@ function processData(data, id, newPlot, showlegend) {
         l: 20, r: 20, b: 0, t: 0, pad: 0
       }, legend: {
         x: 0, y: -0.3
-      }, 
+      },
       xaxis: { fixedrange: true },
       yaxis: { fixedrange: true }
       },
@@ -82,7 +82,7 @@ function plotGraph(steps, frames) {
       name: 'Projection',
       x: d3.range(1990, 2100),
       y: flattened_data['No climate policies (high)'],
-      mode: 'lines+markers',
+      mode: 'lines',
       line: {
         color: 'blue',
         simplify: false,

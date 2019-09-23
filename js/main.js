@@ -108,7 +108,7 @@ function plotGraph(steps, frames) {
       },
       height: 700,
       xaxis: {range: [1990, 2100], fixedrange: true },
-      yaxis: {range: [-200, 200], fixedrange: true },
+      yaxis: {range: [-10, 200], fixedrange: true },
       sliders: [{
         pad: {t: 30},
         x: 0.05,
